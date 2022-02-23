@@ -1,8 +1,8 @@
 import math
 from decimal import Decimal
-from typing import Dict
 from web3 import Web3
-from across.utils import BigNumberish, toBNWei, fixedPointAdjustment
+from .utils import BigNumberish, toBNWei, fixedPointAdjustment
+from .constants import RateModel
 
 
 __all__ = [
@@ -10,8 +10,6 @@ __all__ = [
     "calculate_apy_from_utilization",
     "calculate_realized_lp_fee_pct",
 ]
-RateModel = Dict[str, int]
-
 
 def calculate_instantaneous_rate(
     rate_model: RateModel, utilization: BigNumberish

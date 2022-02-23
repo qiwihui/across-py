@@ -1,14 +1,9 @@
 import requests
 from typing import Dict
+from .exceptions import AcrossException
 
 
 __all__ = ["AcrossException", "AcrossAPI"]
-
-
-class AcrossException(Exception):
-    """Across exception."""
-
-    pass
 
 
 class AcrossAPI:
