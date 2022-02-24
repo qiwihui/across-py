@@ -11,9 +11,9 @@ __all__ = ["LpFeeCalculator"]
 
 class LpFeeCalculator:
     def __init__(self, provider) -> None:
-        self.block_finder = BlockFinder(provider)
         self.provider = provider
         self.w3 = Web3(provider=provider)
+        self.block_finder = BlockFinder(provider, self.w3.eth.get_block)
 
     def get_lp_fee_pct(
         self,

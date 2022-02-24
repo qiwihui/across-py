@@ -43,7 +43,7 @@ assert realized_lp_fee_pct == interval["wpy"]
 
 ### LP Fee Calculator
 
-Get lp fee calculations by timestamp. **Currently only support `latest`**.
+Get lp fee calculations by timestamp.
 
 ```py
 from across import LpFeeCalculator
@@ -54,7 +54,7 @@ calculator = LpFeeCalculator(provider)
 token_address = "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2" # WETH on mainnet
 bridge_pool_address = "0x7355Efc63Ae731f584380a9838292c7046c1e433" # WETH BridgePool on mainnet
 amount = "1000000000000000000" # 1 ETH
-timestamp = None # timestamp in seconds
+timestamp = 1645000000 # timestamp in seconds
 percent = calculator.get_lp_fee_pct(
     token_address, bridge_pool_address, amount, timestamp
 )
